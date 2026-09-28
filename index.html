@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erwann Robin · Open Source</title>
+<meta name="description" content="Open-source projects by Erwann Robin: games, experiments and real-time communication tools.">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --card: #ffffff;
+    --text: #1c1917;
+    --muted: #57534e;
+    --border: #e7e5e4;
+    --accent: #2563eb;
+    --tag: #f5f5f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0a09;
+      --card: #1c1917;
+      --text: #f5f5f4;
+      --muted: #a8a29e;
+      --border: #292524;
+      --accent: #60a5fa;
+      --tag: #292524;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 56px 16px 40px; }
+  header h1 { font-size: 2rem; margin: 0 0 6px; }
+  header p { color: var(--muted); margin: 0; }
+  h2 {
+    font-size: .8rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin: 44px 0 14px;
+  }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .card {
+    display: flex; flex-direction: column; gap: 8px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px; text-decoration: none; color: inherit;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card h3 { margin: 0; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .92rem; flex: 1; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .8rem; }
+  .tag { background: var(--tag); border-radius: 999px; padding: 2px 10px; color: var(--muted); }
+  .links { display: flex; gap: 14px; font-size: .85rem; }
+  .links a { color: var(--accent); text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  footer { margin-top: 56px; color: var(--muted); font-size: .9rem; text-align: center; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Erwann Robin</h1>
+    <p>Developer &amp; entrepreneur. My open-source projects: games, experiments and real-time tools.</p>
+  </header>
+
+  <h2>Communication &amp; infrastructure</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Voxal</h3>
+      <p>Serverless P2P push-to-talk voice chat. No accounts, no server. Works on macOS, iOS, Android and web.</p>
+      <div class="meta"><span class="tag">JavaScript</span><span class="tag">P2P</span></div>
+      <div class="links"><a href="https://github.com/ErwannRobin/Voxal">Source</a></div>
+    </div>
+    <div class="card">
+      <h3>Raven</h3>
+      <p>Developer-first realtime infrastructure for voice, video, chat and live streaming apps, with simple APIs and SDKs.</p>
+      <div class="meta"><span class="tag">Early stage</span></div>
+      <div class="links"><a href="https://github.com/ErwannRobin/raven">Source</a></div>
+    </div>
+  </div>
+
+  <h2>Games</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>GYROLL</h3>
+      <p>Endless 3D marble game for your phone. Tilt to roll along a narrow track floating in the void. Don't fall off.</p>
+      <div class="meta"><span class="tag">HTML</span><span class="tag">Mobile</span></div>
+      <div class="links"><a href="https://gyroll.vercel.app/">Play</a><a href="https://github.com/ErwannRobin/gyro">Source</a></div>
+    </div>
+    <div class="card">
+      <h3>Glow Grid</h3>
+      <p>Daily puzzle game inspired by Lights Out. Light up every cell. A new solvable puzzle each day.</p>
+      <div class="meta"><span class="tag">HTML</span><span class="tag">Puzzle</span></div>
+      <div class="links"><a href="https://glow-grid.vercel.app">Play</a><a href="https://github.com/ErwannRobin/glowgrid">Source</a></div>
+    </div>
+    <div class="card">
+      <h3>Awalé Web</h3>
+      <p>Web version of Awalé, the classic African seed-sowing strategy game of the mancala family. Play against the AI.</p>
+      <div class="meta"><span class="tag">TypeScript</span><span class="tag">Board game</span></div>
+      <div class="links"><a href="https://awale-web.vercel.app">Play</a><a href="https://github.com/ErwannRobin/awale-web">Source</a></div>
+    </div>
+    <div class="card">
+      <h3>Makefile Games</h3>
+      <p>Terminal games written entirely in GNU Make. No compilation, just <code>make</code> and play.</p>
+      <div class="meta"><span class="tag">Makefile</span><span class="tag">Terminal</span></div>
+      <div class="links"><a href="https://github.com/ErwannRobin/makefile-game">Source</a></div>
+    </div>
+  </div>
+
+  <h2>Experiments</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>EX NIHILO</h3>
+      <p>Generative audiovisual piece in a single HTML file.</p>
+      <div class="meta"><span class="tag">HTML</span><span class="tag">Generative</span></div>
+      <div class="links"><a href="https://github.com/ErwannRobin/ex-nihilo">Source</a></div>
+    </div>
+    <div class="card">
+      <h3>Portfolio</h3>
+      <p>A showcase of small web tools and creative experiments.</p>
+      <div class="meta"><span class="tag">TypeScript</span></div>
+      <div class="links"><a href="https://erwann.lovable.app">Visit</a><a href="https://github.com/ErwannRobin/erwann">Source</a></div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/ErwannRobin">GitHub</a> ·
+    <a href="https://x.com/diwann">X / Twitter</a> ·
+    <a href="https://www.linkedin.com/in/erwannrobin/">LinkedIn</a> ·
+    <a href="https://phone-verif.com">Phone-Verif</a>
+  </footer>
+</main>
+</body>
+</html>
